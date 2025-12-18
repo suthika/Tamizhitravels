@@ -1,0 +1,1013 @@
+:root {
+    --gold-color: #ceaa60;
+    --teal-color: #266b73;
+    --brown-red-color: #86382b;
+    --light-color: #f8f9fa;
+    --dark-color: #333;
+    --gold-light: #e6d5b3;
+    --teal-light: #a3c4c8;
+    --brown-red-light: #c79a91;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    padding-top: 0;
+}
+
+/* Tamil Font */
+.tamil-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+
+/* Logo Image Styles */
+.logo-img {
+    height: 140px;
+    width: auto;
+    max-width: 350px;
+}
+
+/* Navigation Bar */
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* DARKER COLOR & LARGER TEXT for Navigation Links */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 1.1rem; /* Increased text size */
+    color: var(--teal-color) !important; /* Darker color */
+    margin: 0 12px;
+    padding: 10px 18px !important; /* Increased padding */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Darker hover state */
+.navbar-nav .nav-link:hover {
+    color: var(--teal-color) !important; /* Even darker on hover */
+    background-color: rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Active state with dark color */
+.navbar-nav .nav-link.active {
+    color: var(--teal-color) !important; /* Dark color for active */
+    font-weight: 700;
+    background-color: rgba(206, 170, 96, 0.15); /* Light gold background */
+    border-bottom: 3px solid var(--gold-color); /* Gold underline */
+}
+
+/* Mobile view adjustments for larger text */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        font-size: 1.2rem; /* Even larger on mobile */
+        padding: 12px 20px !important;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(65, 128, 133, 0.85), rgba(14, 26, 27, 0.9)), url('images/background .jpeg');
+    background-size: cover;
+    background-position: center;
+    /* REMOVED: background-attachment: fixed; */
+    color: white;
+    padding: 120px 0 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--teal-color);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--gold-color);
+    border-radius: 2px;
+}
+
+.section-title-center:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title-center {
+    text-align: center;
+}
+
+/* Color Text Classes */
+.text-gold {
+    color: var(--gold-color) !important;
+}
+
+.text-teal {
+    color: var(--teal-color) !important;
+}
+
+.text-brown-red {
+    color: var(--brown-red-color) !important;
+}
+
+/* Service Cards */
+.service-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--teal-color);
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(38, 107, 115, 0.15);
+}
+
+.service-card .card-body {
+    padding: 30px 25px;
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: var(--teal-color);
+    margin-bottom: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    color: var(--teal-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* Destination Cards */
+.destination-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(134, 56, 43, 0.12);
+}
+
+.destination-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.destination-card .card-body {
+    padding: 25px;
+}
+
+/* Packages Section */
+.packages-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.package-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+    height: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.package-card:hover {
+    border-color: var(--gold-color);
+    box-shadow: 0 15px 35px rgba(206, 170, 96, 0.15);
+    transform: translateY(-5px);
+}
+
+.package-header {
+    background-color: var(--teal-color);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.package-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.package-header .h5 {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.package-card .card-body {
+    padding: 30px;
+}
+
+.package-card .list-unstyled li {
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.package-card .list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+.package-card .list-unstyled .fa-check {
+    color: var(--teal-color);
+}
+
+.package-card .list-unstyled .fa-times {
+    color: #adb5bd;
+}
+
+/* Alert */
+.alert-teal {
+    background-color: var(--teal-light);
+    border-color: var(--teal-color);
+    color: var(--teal-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.alert-heading {
+    color: var(--teal-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--teal-color);
+    margin-right: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-info h5 {
+    color: var(--teal-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Social Icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--teal-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--gold-color);
+    transform: translateY(-5px);
+    color: var(--dark-color);
+}
+
+/* Contact Form */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--gold-color);
+    box-shadow: 0 0 0 0.25rem rgba(206, 170, 96, 0.25);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--teal-color);
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.btn-gold {
+    background-color: var(--gold-color);
+    border-color: var(--gold-color);
+    padding: 12px 30px;
+    font-weight: 600;
+    color: var(--dark-color);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-gold:hover {
+    background-color: #c09850;
+    border-color: #c09850;
+    color: var(--dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(206, 170, 96, 0.3);
+}
+
+.btn-teal {
+    background-color: var(--teal-color);
+    border-color: var(--teal-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-teal:hover {
+    background-color: #1d5a61;
+    border-color: #1d5a61;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(38, 107, 115, 0.3);
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--teal-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+footer h4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 12px;
+}
+
+footer .list-unstyled a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+}
+
+footer .list-unstyled a:hover {
+    color: var(--gold-color);
+    padding-left: 5px;
+}
+
+.bg-gold {
+    background-color: var(--gold-color) !important;
+    height: 2px;
+    opacity: 0.5;
+    margin: 30px 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--teal-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1199.98px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 100px 0 80px;
+        background-attachment: scroll;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section .col-lg-6:first-child {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card, .destination-card, .package-card {
+        margin-bottom: 30px;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .logo-img {
+        height: 100px;
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Utility Classes */
+.mt-6 {
+    margin-top: 4rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.py-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Print Styles */
+@media print {
+    .hero-section {
+        background: white !important;
+        color: black !important;
+        padding: 50px 0 !important;
+    }
+    
+    .btn, .social-icon, .navbar-toggler {
+        display: none !important;
+        
+    }
+}
+/* Service Bullets Styles */
+.service-bullets {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.service-bullets p {
+    margin-bottom: 8px;
+    padding-left: 5px;
+    color: #555;
+}
+
+.service-bullets .fa-check-circle {
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+/* Adjust card body padding for bullets */
+.service-card .card-body {
+    padding: 25px 20px;
+}
+
+/* Adjust title spacing */
+.service-card .card-title {
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-bullets {
+        font-size: 0.9rem;
+    }
+    
+    .service-card .card-body {
+        padding: 20px 15px;
+    }
+}
+/* Destinations Carousel Styles */
+.carousel-inner {
+    padding: 20px 0;
+}
+
+.destination-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(134, 56, 43, 0.15);
+}
+
+.destination-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Carousel indicator styling */
+.carousel-indicators {
+    position: static; /* Change from relative/absolute to static */
+    margin-top: 25px; /* Add space between cards and indicators */
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+/* Remove any transform/position that was placing them inside */
+.carousel-indicators {
+    transform: none; /* Remove if present */
+    bottom: auto; /* Remove if present */
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--teal-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-inner {
+        padding: 10px 0;
+    }
+    
+    .destination-card {
+        margin-bottom: 20px;
+    }
+    
+    .destination-img {
+        height: 200px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+    }
+}
+/* Destinations Carousel Styles */
+.carousel-inner {
+    padding: 20px 0;
+}
+
+.destination-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(134, 56, 43, 0.15);
+}
+
+.destination-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Carousel indicator styling */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--teal-color);
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    background-color: var(--gold-color);
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--teal-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-inner {
+        padding: 10px 0;
+    }
+    
+    .destination-card {
+        margin-bottom: 20px;
+    }
+    
+    .destination-img {
+        height: 200px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+    }
+}
+/* Make destination cards look clickable */
+.destination-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(134, 56, 43, 0.2);
+}
+/* Remove blue color from all links */
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Add hover effect */
+a:hover {
+    color: var(--gold-color) !important;
+    text-decoration: underline !important;
+}
+/* Remove blue color from ALL links globally */
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Add hover effect for all links */
+a:hover {
+    color: var(--gold-color) !important;
+    text-decoration: underline !important;
+}
+
+/* Ensure specific link types also inherit colors */
+a:link, a:visited, a:active {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Force ALL links to not be blue - this is the strongest rule */
+*[href] {
+    color: inherit !important;
+}
+/* Override Bootstrap link styles */
+a:not([class*="btn"]):not(.navbar-brand):not(.social-icon) {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+a:not([class*="btn"]):not(.navbar-brand):not(.social-icon):hover {
+    color: var(--gold-color) !important;
+    text-decoration: none !important;
+}
+/* Compact Package Cards */
+.package-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.package-header {
+    padding: 15px 15px !important;
+}
+
+.package-header h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 5px !important;
+}
+
+.package-header .h5 {
+    font-size: 0.95rem !important;
+    opacity: 0.9;
+}
+
+.package-card .card-body {
+    padding: 20px !important;
+}
+
+.package-card .card-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 15px !important;
+}
+
+/* Make list items more compact */
+.package-card .list-unstyled {
+    margin-bottom: 15px !important;
+}
+
+.package-card .list-unstyled li {
+    padding: 5px 0 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Make vehicle type headings smaller */
+.text-brown-red {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+}
+
+/* Smaller buttons */
+.package-card .btn-teal,
+.package-card .btn-gold {
+    padding: 8px 15px !important;
+    font-size: 0.9rem !important;
+}
+
+/* Adjust grid spacing for more compact layout */
+.row.g-4 {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 1rem !important;
+}
+
+/* Make tabs smaller */
+.nav-pills .nav-link {
+    padding: 8px 20px !important;
+    font-size: 0.9rem !important;
+    margin: 0 5px !important;
+}
+
+/* Adjust alert boxes */
+.alert-teal {
+    padding: 12px 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.alert-teal p {
+    font-size: 0.85rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Make the package section title smaller */
+.packages-section .section-title {
+    font-size: 2rem !important;
+    margin-bottom: 20px !important;
+}
+
+.packages-section .lead {
+    font-size: 1rem !important;
+    margin-bottom: 30px !important;
+}
+
+/* Specific adjustments for temple packages card */
+.package-card .row.text-start .list-unstyled li {
+    font-size: 0.85rem !important;
+    padding: 3px 0 !important;
+}
+
+/* Adjust icon sizes in package cards */
+.package-card .fas,
+.package-card .fa-solid {
+    font-size: 0.8rem !important;
+}
+
+/* Make car rental cards more compact */
+.package-card .list-unstyled strong {
+    font-size: 0.85rem !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .col-md-6, .col-lg-4 {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .package-card {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Ensure content fits in smaller cards */
+.package-card h6 {
+    font-size: 0.95rem !important;
+}
+
+/* Adjust spacing in the "All Hill Station Tours" card */
+.package-card .mt-auto {
+    margin-top: 10px !important;
+}
+/* Packages section subtitle color */
+.packages-section .lead {
+    color: var(--teal-color) !important;
+    font-weight: 500;
+}
+
+/* Tab styling - gold for inactive, teal for active */
+.nav-pills .nav-link {
+    color: var(--gold-color) !important;
+    border-color: var(--gold-color) !important;
+    background-color: white !important;
+}
+
+.nav-pills .nav-link.active {
+    color: white !important;
+    background-color: var(--teal-color) !important;
+    border-color: var(--teal-color) !important;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    color: var(--teal-color) !important;
+    border-color: var(--teal-color) !important;
+    background-color: rgba(38, 107, 115, 0.1) !important;
+}

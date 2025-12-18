@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/about</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Services page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/services</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Tours page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/tours</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Us page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/contact</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Blog (if present) -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/blog</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Example tour detail page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/tour/chennai-madurai-package</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Example terms or privacy page -->
+  <url>
+    <loc>https://www.tamizhinitravels.com/privacy-policy</loc>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
